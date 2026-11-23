@@ -1288,7 +1288,7 @@ func TestPodGroupPreemptionAndNominatedNodeNameScenarios(t *testing.T) {
 			},
 		},
 		{
-			name: "partial composite podgroup preemption sets NNN on placed child and clears stale NNN on rejected child",
+			name: "partial CPG scheduling that triggers preemption sets NNN on placed child and clears stale NNN on rejected child",
 			scenarios: []scenario{
 				{
 					name:       "create node1",
@@ -1393,7 +1393,7 @@ func TestPodGroupPreemptionAndNominatedNodeNameScenarios(t *testing.T) {
 			},
 		},
 		{
-			name: "failed gang composite podgroup preemption clears NNN even for child that fit on its own",
+			name: "failed gang CPG scheduling clears NNN even for child that fit on its own",
 			scenarios: []scenario{
 				{
 					name:       "create node1",

@@ -3296,7 +3296,7 @@ func TestPodGroupCycle_NominatedNodes(t *testing.T) {
 			},
 		},
 		{
-			name:       "failed gang CompositePodGroup preemption clears NNN even for child that fit on its own",
+			name:       "failed gang CompositePodGroup scheduling clears NNN even for child that fit on its own",
 			tasEnabled: true,
 			cpgEnabled: true,
 			rootCPG:    st.MakeCompositePodGroup().Name("cpg").Namespace("default").MinGroupCount(2).Priority(100).Obj(),
